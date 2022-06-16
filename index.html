@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.css">
+</head>
+
+<body style="background-color:cadetblue;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div id="first" class="col-sm-4">
+                <h4 id="third">RB BANK APP</h4>
+                <!-- <img src="I1.png" alt="" id="fourth">
+            <img src="I6.png" alt="" id="fifth"> -->
+                <!-- <h7 id="sixth">Don't have an account?</h7>
+                <h7 id="seventh">Register</h7> -->
+                <p href="" id="seventh">Already have an account?<br> <a href="/bank.html">Login here</a></p>
+            </div>
+            <div id="second" class="col-sm-4 bg-light">
+                <h4><a>Log In</a> to your account <br> to continue Banking</h4><br>
+
+                <div>
+                    <label for="">Full Name</label>
+                    <div>
+                        <input type="text" class="form-control" id="nam" value="">
+                        <div id="fullError" style="color: red;"></div>
+                    </div>
+                    <label for="">Phone Number</label>
+                    <div>
+                        <input type="text" id="number" class="form-control" value="">
+                        <div id="phoneError" style="color: red;"></div>
+                    </div>
+                    <!-- <label for="">House Address</label> -->
+                    <!-- <div>
+                        <input type="text" id="address" class="form-control" value="">
+                    </div> -->
+                    <label for="">Username or Email</label>
+                    <input type="text" id="email" class="form-control" value="">
+                    <div id="emailerror" style="color: red;"></div>
+                    <label for="">Password</label>
+                    <div>
+                        <input id="passWord" type="password" class="form-control" value="">
+                        <div id="password" style="color: red;"></div>
+                    </div>
+
+
+                    <div>
+                        <!-- <input  class="form-control" id value=""> -->
+                        <input type="checkbox" name="" id="check"> Remember Me?
+
+
+                    </div>
+                   <!-- <a href="account no.html"> <button onclick="r()" id="submit">SIGN UP</button></a> -->
+                  <a href="bank.html"> <button onclick="r()" id="sub">SIGN IN</button></a> 
+                    <!-- <div id="input">
+                        <br>
+                        <br>
+                        <input type="text" style="margin-left: 80px;">
+
+                    </div> -->
+
+                    <h6 id="f">Forgot password?</h6>
+                   
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        arr = [];
+        function r() {
+            var nm = nam.value;
+            var pH = number.value;
+            var eM = email.value;
+            var pas = passWord.value;
+            acctNo = 20000 + Math.floor(Math.random() * 10) + "" + Math.floor(Math.random() * 10) + "" + Math.floor(Math.random() * 10) + "" + Math.floor(Math.random() * 10);
+            var obj = { nam: nam.value, email: email.value, passWord: passWord.value, phonenumber: pH.value, acctNo:acctNo}
+                    
+            // input.innerHTML = acctNo;
+
+          
+            if (nm == "" && pH == "" && eM == "" && pas == "") {
+                document.getElementById("fullError").innerText = "fill your first"
+                document.getElementById("phoneError").innerText = "fill your phonenumber"
+                document.getElementById("emailerror").innerText =
+                    "fill your email"
+                document.getElementById("password").innerText =
+                    "fill your password"
+            }
+            else if (nm == "" || pH == "" || eM == "" || pas == "") {
+                if (nm == "") {
+                    document.getElementById("fullError").innerText = "fill your first"
+                }
+                else if (pH == "") {
+                    document.getElementById("phoneError").innerText = "fill your phonenumber"
+                }
+
+                else if (eM == "") {
+                    document.getElementById("emailerror").innerText =
+                        "fill your email"
+                }
+                else if (pas == "") {
+                    document.getElementById("password").innerText =
+                        "fill your password"
+
+                }
+
+            }
+            else {
+
+              
+                if (localStorage.li != null) {
+                    arr = JSON.parse(localStorage.getItem("li"))
+                }
+
+       
+                arr.push(obj)
+                var tao = JSON.stringify(arr)
+                localStorage.setItem("li", tao);
+                location.href=bank.html
+            }
+
+        }
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+
+ 
+
+}
+
+.row{
+    margin-top: 10%;
+    height: 500px;
+}
+
+#first{
+    border-bottom-left-radius: 20px; 
+    background-color:teal; 
+    margin-top: 50px;
+}
+
+#second{
+    border-top-right-radius: 20px; 
+    margin-top: 50px;
+}
+
+#second h4{
+    font-size: 25px;
+    margin: 40px 0 0 50px;
+    color: rgb(134, 134, 134);
+}
+
+#second h4 a{
+     color: rgb(42, 181, 236);
+     margin-top: 10%;
+ }
+ #third{
+     color: white;
+      margin-top: 30%;
+        padding: 35px;
+     margin: 80px auto;
+    font-size: 3em;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+ }
+ #fourth{
+     margin-top: 100%;
+     margin-left: 120px;
+ }
+ #fifth{
+     margin-top: 100%;
+     margin-left: 5px; 
+ } 
+ #sixth{
+  margin-left: 90px;
+  color: white;
+ }
+#seventh{
+margin-left: 130px; 
+
+color: white;
+}
+#check{
+    margin-top: 40px;
+    margin-left: 40px;
+    color: white !important;
+}
+#submit{
+    margin-left: 40px;
+    margin-top: 20px;
+   background-color:teal;
+   color: white;
+    width: 250px;
+    border: none;
+}
+#f{
+margin-top: 30px;
+margin-left: 90px;
+color:wheat
+}
+form{
+    margin-top: 50px;
+}
+#sub{
+    margin-left: 40px;
+    margin-top: 20px;
+   background-color:teal;
+   color: white;
+    width: 250px;
+    border: none;  
+}
